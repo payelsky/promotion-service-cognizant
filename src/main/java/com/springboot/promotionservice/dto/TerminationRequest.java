@@ -1,10 +1,11 @@
 package com.springboot.promotionservice.dto;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Data
 @NoArgsConstructor
@@ -16,6 +17,7 @@ public class TerminationRequest {
 	@NotNull(message = "reason shouldn't be null")
 	private String reason;
 	@NotNull(message = "forceTermination shouldn't be null")
+	@Pattern(regexp ="Y")
 	private String forceTermination;
 	
 
