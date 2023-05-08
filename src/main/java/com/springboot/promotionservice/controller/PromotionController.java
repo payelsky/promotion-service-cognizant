@@ -21,8 +21,8 @@ public class PromotionController {
 	private PromotionService promotionService;
 	
 	@PostMapping("/checkEligibility")
-	public List<EmployeeResponse> checkEligibility(@RequestBody List<EmployeeDetails> hcm) {
-	return	promotionService.checkEligibility(hcm);
+	public List<EmployeeResponse> checkEligibility(@RequestBody List<EmployeeDetails> emplist) {
+	return	promotionService.checkEligibility(emplist);
 	}
 
 }
